@@ -354,7 +354,10 @@ const DRAG_OPTIONS = {
 	dragClass: 'task-dragging',
 	delayOnTouchOnly: true,
 	delay: 1000,
-	// sortable's 30px default is too narrow to reach while dragging a card towards an off-screen bucket
+	// With native drag sortable leaves the innermost scroll container (the board) to the browser,
+	// which only scrolls within a few pixels of the edge. Scroll it ourselves, and start well before
+	// the edge so dragging a card towards an off-screen bucket actually reaches it.
+	forceAutoScrollFallback: true,
 	scrollSensitivity: 100,
 } as const
 
