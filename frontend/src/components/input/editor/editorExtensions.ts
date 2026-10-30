@@ -21,6 +21,7 @@ import {TaskList} from '@tiptap/extension-list'
 import {TaskItemWithId} from './taskItemWithId'
 import {ListKeymapWithJoin} from './listKeymapWithJoin'
 import {DeleteSelectionBeforeEnter} from './deleteSelectionBeforeEnter'
+import {ListClipboardText} from './listClipboardText'
 import {BlockquoteWithCommentId} from './blockquoteWithCommentId'
 import {TaskLink, LINK_HTML_ATTRIBUTES} from './taskLink'
 import {createClipboardParser, fillRequiredContent, repairSliceContent} from './contentRepair'
@@ -299,6 +300,7 @@ export function createEditorExtensions(deps: EditorExtensionDeps): Extensions {
 		}),
 		ListKeymapWithJoin,
 		DeleteSelectionBeforeEnter,
+		ListClipboardText,
 		BlockquoteWithCommentId,
 
 		CodeBlockLowlight.configure({
